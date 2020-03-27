@@ -138,6 +138,7 @@ class SessionsController < ApplicationController
                                 end
     ldap_config[:base] = ENV['LDAP_BASE']
     ldap_config[:uid] = ENV['LDAP_UID']
+    ldap_config[:filter] = ENV['LDAP_FILTER']
 
     result = send_ldap_request(params[:session], ldap_config)
 
